@@ -1,0 +1,68 @@
+
+{ "libreria": {
+      "libro":[
+        {
+          "titulo": "El gran Gatsby",
+          "autor_id": "a1",
+          "genero": "Ficcion",
+          "fecha_publicacion": 1925,
+          "idioma": "Ingles"
+        },
+        {
+          "titulo": "Android Studio: ¿Como funciona?",
+          "autor_id": "a2",
+          "genero": "Educativo",
+          "fecha_publicacion": 2006,
+          "idioma": "Castellano"
+        },
+        {
+          "titulo": "Arroz i tartana",
+          "autor_id": "a3",
+          "genero": "Novela historica",
+          "fecha_publicacion": 20019,
+          "idioma": "valenciano"
+        },
+        {
+          "titulo": 1984,
+          "autor_id": "a4",
+          "genero": "Ficcion, distopia futorista",
+          "fecha_publicacion": 1949,
+          "idioma": "Ingles"
+        },
+        {
+          "titulo": "Mikel Jordan",
+          "autor_id": "a5",
+          "genero": "Bibliografico",
+          "fecha_publicacion": 2020,
+          "idioma": "Español"
+        }
+      ],
+      "autor": [
+        {
+          "nombre": "F. Scott Fitzgerald",
+          "fecha_nacimiento": "24-09-1896",
+          "nacionalidad": "Americano"
+        },
+        {
+          "nombre": "Carlos Aguilella",
+          "fecha_nacimiento": "24-02-2004",
+          "nacionalidad": "Ondense"
+        },
+        {
+          "nombre": "Josep Navarro",
+          "fecha_nacimiento": "09-12-2000",
+          "nacionalidad": "Alfondeguillero"
+        },
+        {
+          "nombre": "Manuel Callau",
+          "fecha_nacimiento": "2003-02-24",
+          "nacionalidad": "Vallero"
+        },
+        {
+          "nombre": "Alejandro Perez",
+          "fecha_nacimiento": "2003-02-24",
+          "nacionalidad": "Vallero"
+        }
+      ]
+    }
+  }

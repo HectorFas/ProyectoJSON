@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Libreria Galdos</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+
+    </head>
+    <body>
+    
+        <h1>Libreria Galdos</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        titulo
+                    </th>
+                    <th>
+                        autor_id
+                    </th>
+                    <th>
+                        genero
+                    </th>
+                    <th>
+                        fecha_publicacion
+                    </th>
+                    <th>
+                        idioma
+                    </th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <thead id="#app">
+                    
+                </thead>
+            </tbody>
+        </table>
+
+
+        <script id="#PortadaProyecto_template"  type="text/x-jsrender">
+            {{for libro}}
+            <tr>
+                <th>
+                    {{:titulo}}
+                </th>
+                <th>
+                    {{:autor_id}}
+                </th>
+                <th>
+                    {{:genero}}
+                </th>
+                <th>
+                    {{:fecha_publicacion}}
+                </th>
+                <th>
+                    {{:idioma}}
+                </th>
+            </tr>
+            {{/for}}
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.12/jsrender.min.js"></script>
+        <script>
+            $.getJSON("Libreria.json",(data) => {
+                    var html = $("#PortadaProyecto_template").render(data);
+
+                   $("#app").html(html);
+                });
+                
+           
+
+        </script>
+    </body>
+</html>
