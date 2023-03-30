@@ -8,10 +8,13 @@
     <body>
     
         <h1>Libreria Galdos</h1>
-        
+   
         <table>
             <thead>
                 <tr>
+                    <th>
+                        image
+                    </th>
                     <th>
                         titulo
                     </th>
@@ -26,51 +29,51 @@
                     </th>
                     <th>
                         idioma
-                    </th>
+                    </th>       
                 </tr>
             </thead>
         
             <tbody>
-                <thead id="#app">
+                <thead id="app">
                     
                 </thead>
             </tbody>
         </table>
 
 
-        <script id="#PortadaProyecto_template"  type="text/x-jsrender">
-            {{for libro}}
+        <script id="PortadaProyecto_template"  type="text/x-jsrender">
+            {{for libreria.libro}}
             <tr>
-                <th>
+                <td>
+                    {{:image}}
+                </td>
+                <td>
                     {{:titulo}}
-                </th>
-                <th>
+                </td>
+                <td>
                     {{:autor_id}}
-                </th>
-                <th>
+                </td>
+                <td>
                     {{:genero}}
-                </th>
-                <th>
+                </td>
+                <td>
                     {{:fecha_publicacion}}
-                </th>
-                <th>
+                </td>
+                <td>
                     {{:idioma}}
-                </th>
+                </td>
+                    
             </tr>
             {{/for}}
         </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.12/jsrender.min.js"></script>
+
         <script>
-            $.getJSON("Libreria.json",(data) => {
-                    var html = $("#PortadaProyecto_template").render(data);
-
-                   $("#app").html(html);
+            $.getJSON("https://raw.githubusercontent.com/HectorFas/ProyectoJSON/master/Libreria.json",(data) => {
+                   $("#app").html($.templates("#PortadaProyecto_template").render(data));
                 });
-                
-           
-
         </script>
     </body>
 </html>
